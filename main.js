@@ -494,11 +494,28 @@ inputnx2.addEventListener('blur', function() {
 
 
 
-// let inputn17 = document.querySelector('.n23inp1');
-// let inputn18 = document.querySelector('.n23inp2');
-// let inputn19 = document.querySelector('.n23inp3');
-// let btn11 = document.querySelector('.n23btn');
-// let p10 = document.querySelector('.n23p');
-// btn6.addEventListener('click', function() {
+let inputnx3 = document.querySelector('.n223inp1');
+let inputnx4 = document.querySelector('.n223inp2');
+let inputnx5 = document.querySelector('.n223inp3');
+let px3 = document.querySelector('.n23p');
+let btnx = document.querySelector('.n23b');
+btnx.addEventListener('click', function() {
+    let a = inputnx3.value;
+    let b = inputnx4.value;
+    let c = inputnx5.value;
 
-// });
+    d = b ** 2 - 4 * a * c;
+
+    if (d > 0) {
+        x1 = (-b + Math.sqrt(d)) / (2 * a);
+        x2 = (-b - Math.sqrt(d)) / (2 * a);
+        px3.textContent = 'корни вашего уравнения: ' + x1 + ' и' + x1;
+    }
+    else if (d == 0) {
+        x = -b / (2 * a);
+        px3.textContent = 'корень вашего уравнения: ' + x;
+    }
+    else {
+        px3.textContent = 'корни вашего уравнения: их нет(';
+    }
+});
