@@ -395,6 +395,21 @@ p5.addEventListener('click', function() {
 
 
 
+let inputnx = document.querySelector('.n15inp');
+let px = document.querySelector('.n15p');
+inputnx.addEventListener('blur', function() {
+    let date = inputnx.value.split('.').reverse().join(',');
+    let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+    let dater = new Date(date);
+    let day = dater.getDay();
+    let dayres = days[day];
+
+    px.textContent = 'День недели: ' + dayres;
+});
+
+
+
 let inputn12 = document.querySelector('.n17inp');
 let p6 = document.querySelector('.n17p1');
 let p7 = document.querySelector('.n17p2');
