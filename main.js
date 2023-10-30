@@ -481,12 +481,16 @@ btn5.addEventListener('click', function() {
 
 
 
-// let inputn16 = document.querySelector('.n22inp');
-// let btn10 = document.querySelector('.n22btn');
-// let p9 = document.querySelector('.n21p');
-// btn6.addEventListener('click', function() {
+let inputnx2 = document.querySelector('.n22inp');
+let px2 = document.querySelector('.n22p');
+inputnx2.addEventListener('blur', function() {
+    num = inputnx2.value
+    function factorial(num) {
+        return (num != 1) ? num * factorial(num - 1) : 1;
+    }
 
-// });
+    px2.textContent = 'фактоииал вашего числа: ' + factorial(num);
+});
 
 
 
